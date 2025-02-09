@@ -1,0 +1,24 @@
+[project]
+name = "kyu"
+version = "0.0.1"
+authors = [{ name = "Philipp Schindler" }]
+description = "KeePassXC YubiKey Unlocker: An opinionated, personal CLI tool for protecting KeePassXC databases with a combination of a passphrase and a YubiKey."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["click>=8.1.8", "yubikey-manager>=5.5.1"]
+license = "MIT"
+license-files = ["LICENSE"]
+
+[project.scripts]
+kyu = "kyu.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/PhilippSchindler/keepassxc-yubikey-unlocker"
+Issues = "https://github.com/PhilippSchindler/keepassxc-yubikey-unlocker/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = ["pytest>=8.3.4"]
